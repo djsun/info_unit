@@ -10,10 +10,15 @@ describe "InfoUnit" do
         InfoUnit.new('100KB'),
         InfoUnit.new('100 KB'),
       ].each do |x|
+        bytes = 100 * 1024
         x.number.should == 100
         x.unit.should == 'KB'
-        x.bytes.should == 100 * 1024
-        x.to_hash.should == { 'KB' => 100 }
+        x.bytes.should == bytes
+        x.to_hash.should == {
+          :number => 100,
+          :unit   => 'KB',
+          :bytes  => bytes,
+        }
       end
     end
   
@@ -23,10 +28,15 @@ describe "InfoUnit" do
         InfoUnit.new('27MB'),
         InfoUnit.new('27 MB'),
       ].each do |x|
+        bytes = 27 * 1048576
         x.number.should == 27
         x.unit.should == 'MB'
-        x.bytes.should == 27 * 1048576
-        x.to_hash.should == { 'MB' => 27 }
+        x.bytes.should == bytes
+        x.to_hash.should == {
+          :number => 27,
+          :unit   => 'MB',
+          :bytes  => bytes,
+        }
       end
     end
 
@@ -36,10 +46,15 @@ describe "InfoUnit" do
         InfoUnit.new('2.3MB'),
         InfoUnit.new('2.3 MB'),
       ].each do |x|
+        bytes = 2.3 * 1048576
         x.number.should == 2.3
         x.unit.should == 'MB'
-        x.bytes.should == 2.3 * 1048576
-        x.to_hash.should == { 'MB' => 2.3 }
+        x.bytes.should == bytes
+        x.to_hash.should == {
+          :number => 2.3,
+          :unit   => 'MB',
+          :bytes  => bytes,
+        }
       end
     end
 
@@ -49,10 +64,15 @@ describe "InfoUnit" do
         InfoUnit.new('1.01KB'),
         InfoUnit.new('1.01 KB'),
       ].each do |x|
+        bytes = 1.01 * 1024
         x.number.should == 1.01
         x.unit.should == 'KB'
-        x.bytes.should == 1.01 * 1024
-        x.to_hash.should == { 'KB' => 1.01 }
+        x.bytes.should == bytes
+        x.to_hash.should == {
+          :number => 1.01,
+          :unit   => 'KB',
+          :bytes  => bytes,
+        }
       end
     end
 
