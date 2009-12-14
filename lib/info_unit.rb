@@ -23,9 +23,9 @@ class InfoUnit
   def to_hash
     if @unit && @number
       {
-        :number => @number,
-        :unit   => @unit,
-        :bytes  => bytes,
+        'number' => @number,
+        'unit'   => @unit,
+        'bytes'  => bytes,
       }
     else
       {}

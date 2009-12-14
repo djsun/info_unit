@@ -15,9 +15,9 @@ describe "InfoUnit" do
         x.unit.should == 'KB'
         x.bytes.should == bytes
         x.to_hash.should == {
-          :number => 100,
-          :unit   => 'KB',
-          :bytes  => bytes,
+          'number' => 100,
+          'unit'   => 'KB',
+          'bytes'  => bytes,
         }
       end
     end
@@ -33,9 +33,9 @@ describe "InfoUnit" do
         x.unit.should == 'MB'
         x.bytes.should == bytes
         x.to_hash.should == {
-          :number => 27,
-          :unit   => 'MB',
-          :bytes  => bytes,
+          'number' => 27,
+          'unit'   => 'MB',
+          'bytes'  => bytes,
         }
       end
     end
@@ -51,9 +51,9 @@ describe "InfoUnit" do
         x.unit.should == 'MB'
         x.bytes.should == bytes
         x.to_hash.should == {
-          :number => 2.3,
-          :unit   => 'MB',
-          :bytes  => bytes,
+          'number' => 2.3,
+          'unit'   => 'MB',
+          'bytes'  => bytes,
         }
       end
     end
@@ -69,9 +69,9 @@ describe "InfoUnit" do
         x.unit.should == 'KB'
         x.bytes.should == bytes
         x.to_hash.should == {
-          :number => 1.01,
-          :unit   => 'KB',
-          :bytes  => bytes,
+          'number' => 1.01,
+          'unit'   => 'KB',
+          'bytes'  => bytes,
         }
       end
     end
